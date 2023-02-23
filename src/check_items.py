@@ -1,5 +1,10 @@
 # Gets and checks the current items
 from projectv2.project import Project
+import os
+
+# Get the environment variable for the API token
+api_key = os.environ.get("GH_API_KEY")
+print("API Key: %s" % api_key[0:5])
 
 p = Project()
 p.get("psecio", 1)
