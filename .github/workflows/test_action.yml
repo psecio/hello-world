@@ -6,8 +6,6 @@ jobs:
   get-num-square:
     runs-on: ubuntu-latest
     name: Returns the number square
-    secrets:
-        GH_API_TOKEN: ${{ secrets.GH_API_TOKEN }}
     steps:
       - name: Checkout
         uses: actions/checkout@v2

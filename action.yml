@@ -26,6 +26,8 @@ runs:
     - name: Run the items check for tracking
       run: python src/check_items.py
       shell: bash
+      env:
+        GH_API_TOKEN: ${{ secrets.GH_API_TOKEN }}
     - name: Pass Inputs to Shell
       run: |
               echo "INPUT_NUM=${{ inputs.num }}" >> $GITHUB_ENV
