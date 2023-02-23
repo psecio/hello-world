@@ -3,7 +3,7 @@ from projectv2.project import Project
 import os
 
 # Get the environment variable for the API token
-api_key = os.getenv("GH_API_TOKEN")
+api_key = os.environ.get("GH_API_TOKEN")
 print("API Key: %s" % api_key[0:5])
 
 p = Project()
