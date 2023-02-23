@@ -24,7 +24,7 @@ runs:
       run: pip install -i https://test.pypi.org/simple/ projectv2
       shell: bash
     - name: Run the items check for tracking
-      env: 
+      secrets: 
         GH_API_TOKEN: ${{ secrets.GH_API_TOKEN }}
       run: python src/check_items.py
       shell: bash
